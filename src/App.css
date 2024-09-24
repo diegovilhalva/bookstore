@@ -124,8 +124,78 @@ small {
     width: 100%;
 }
 
+.btn:hover {
+   color: var(--color-bg-1);
+}
+
+.btn-border{
+   border:1px solid var(--color-dark);   
+}
+
+
+
 button {
     background: transparent;
     border: none;
 }
 
+img {
+   width: 100%;
+   object-fit: cover;
+}
+
+.container {
+   width: 90%;
+   margin: 0 auto;
+   max-width: 1420px;
+}
+
+section {
+   padding: 180px 0 !important;
+}
+
+
+@media (max-width:1024px) {
+   h1 {
+      font-size: 60px !important;
+   }
+
+   h2 {
+      font-size: 38px !important;
+   }
+
+   h3 {
+      font-size: 26px !important;
+   }
+
+   h5 span {
+      font-size: 16px !important;
+   }
+
+   section {
+      padding: 100px 0 !important;
+   }
+}
+
+
+@media (max-width:600px) {
+   h1 {
+      font-size: 40px !important;
+   }
+
+   h2 {
+      font-size: 34px !important;
+   }
+
+   h3 {
+      font-size: 24px !important;
+   }
+
+   h4 {
+      font-size: 20px;
+   }
+
+   section {
+      padding: 70px 0 !important;
+   }
+}

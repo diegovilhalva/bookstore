@@ -4,18 +4,33 @@ import Logo from "../../assets/logo.png"
 import { navLinks, navRight } from "../../data/data"
 import { VscMenu } from "react-icons/vsc"
 import { GrClose } from "react-icons/gr"
+import { useState } from "react"
 const Navbar = () => {
+    const [isNavlinksShowing,setIsNavlinksShowing] = useState(false)
+
+    if (innerWidth < 1024) {
+        window.addEventListener("scroll",() => {
+            document.querySelector(".nav-links").classList.add("navLinksHide")
+            setIsNavlinksShowing(false)
+        })
+    }
+
+    window.addEventListener("scroll",() => {
+        document.querySelector("nav").classList.toggle("navShadow",window.scrollY > 0)
+    })
     return (
         <nav>
             <div className="container nav-container">
-                <Link to={'/'}>
+                <Link to={'/'} className="logo">
                     <img src={Logo} alt="Logo" />
                 </Link>
 
-                <ul className="nav-links">
+                <ul className={`nav-links ${isNavlinksShowing ? 'navLinksShow' : 'navLinksHide'}`} >
                     {navLinks.map(({ name, path }) => (
                         <li key={name}>
-                            <NavLink to={path}>{name}</NavLink>
+                            <NavLink to={path} className={({isActive}) => 
+                                isActive ? 'active' : ''
+                            }>{name}</NavLink>
                         </li>
                     ))}
                 </ul>
@@ -28,13 +43,12 @@ const Navbar = () => {
                         ))
                     }
 
-                    <button className="menu-button btn">
-                        <VscMenu />
-                        <GrClose />
+                    <button className="menu-button" onClick={() => setIsNavlinksShowing(prev => !prev)}>
+                        {isNavlinksShowing ?  <GrClose /> : <VscMenu />}
                     </button>
 
                 </div>
-            </div>
+            </div>            
         </nav>
     )
 }
