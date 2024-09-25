@@ -1,0 +1,49 @@
+
+.features-book-container {
+    position: relative;
+}
+
+
+.featurebook-box {
+    margin-top: 56px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    text-align: center;
+}
+
+.featurebook {
+    background: var(--color-light);
+}
+
+
+.featurebook-info>div {
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
+.features-book-container .swiper-pagination{
+    margin: auto;
+    margin-top: 60px;
+}
+
+.feature-border {
+    margin-top: 56px;
+    height: 1px;
+    background: var(--color-dark-Ex);
+    width: 100%;
+}
+.feature-btn {
+    margin: auto;
+    margin-right: 0;
+    margin-top: -40px;
+}
+
+@media (max-width:1024px) {
+    .feature-btn{
+        margin: auto;
+        margin-top: 20px;
+    }
+}
+
+

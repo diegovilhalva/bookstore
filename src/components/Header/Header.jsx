@@ -1,10 +1,10 @@
 import "./Header.css"
 
 import { headerBooks } from "../../data/data"
-import { Swiper, SwiperSlide } from 'swiper/react'
 
-import 'swiper/css'
 import { Link } from "react-router-dom"
+import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import { Navigation, Pagination } from "swiper/modules"
