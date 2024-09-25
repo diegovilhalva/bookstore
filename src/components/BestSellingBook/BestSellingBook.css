@@ -1,0 +1,106 @@
+.bestSellingBook {
+    position: relative;
+    overflow: hidden;
+    background: var(--color-bg-2);
+}
+
+.treeShape {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 300px;
+}
+
+.bestselling-container{
+    width: 74% !important;
+    display: grid;
+    grid-template-columns: 38% auto;
+    gap: 100px;
+    align-items: center;
+    position: relative;
+}
+
+.selling-book-right{
+    position: relative;
+    z-index: 1;
+}
+
+.sellingBookTitle {
+    margin-bottom: 50px;
+}
+
+.selling-book-right> div small{
+    text-transform: uppercase;
+}
+
+.selling-book-right h3 {
+    margin-top: 30px;
+    margin-bottom: 12px;
+}
+
+.selling-book-right h5 {
+    margin-top: 35px;
+    margin-bottom: 40px;
+}
+
+.selling-book-right .btn {
+    padding-left: 0;
+}
+
+.selling-book-right .btn:hover {
+    padding-left: 35px;
+    color:var(--color-bg-1) !important ;
+}
+
+.selling-book-right .btn:hover small {
+    color: var(--color-bg-1) !important;
+}
+
+
+@media (max-width:1200px) {
+    .bestselling-container{
+        gap: 80px;
+        width: 86% !important;
+    }
+}
+
+
+@media (max-width:1024px) {
+    .bestselling-container{
+        width: 90% !important;
+        gap: 40px;
+    }
+    .sellingBookTitle{
+        margin-bottom: 30px;
+    }
+
+    .selling-book-right h5 {
+        margin-top: 15px;
+        margin-bottom: 30px;
+    }
+
+    .selling-book-right h3 {
+        margin-top: 15px;
+        margin-bottom: 6px;
+    }
+}
+
+
+@media (max-width:600px) {
+    .bestselling-container {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .selling-book-left {
+        width: 60%;
+        margin: 0 auto;
+    }
+    .selling-book-right {
+        text-align: center;
+    }
+
+    .selling-book-right .btn{
+        margin: auto;
+        padding-left: 35px;
+    }
+}
