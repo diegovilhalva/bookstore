@@ -396,7 +396,7 @@ export const navLinks =[
       { icon: FiInstagram, link: 'https://www.instagram.com' },
       { icon: GrLinkedinOption, link: 'https://www.linkedin.com' },
       { icon: RiTwitterXLine, link: 'https://www.twitter.com' },
-      { icon: ImBehance, link: 'https://www.twitter.com' }
+      { icon: ImBehance, link: 'https://www.behance.net' }
     ],    
       
   };

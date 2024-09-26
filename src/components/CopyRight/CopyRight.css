@@ -1,0 +1,35 @@
+.footer-copyright {
+    padding: 36px 0;
+    margin-top: 56px;
+    border-top: 1px solid var(--color-dark);
+}
+
+
+.copyright-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.footer-socials a{
+    color: var(--color-dark);
+    transition: var(--transition);
+    font-size: 16px;
+}
+
+.footer-socials a:hover {
+    color: var(--color-primary);
+}
+
+@media (max-width:600px) {
+    .copyright-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
